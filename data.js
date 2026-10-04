@@ -576,16 +576,64 @@ const V6_GEO={
 };
 V6_DAYS.forEach(d=>d.variants[0].rows.forEach(r=>{ for(const k in V6_GEO){ if(r.act.includes(k)){ r.geo=V6_GEO[k]; break; } } }));
 
+// ================= V13 — "สลับแผนตามนี้" (user-confirmed 2026-10-01) =================
+// โครง V5 กลับมาเป็นหลัก: D1 วันเบา (Pokémon+งีบ+หน้าบ้าน) · D5 Maxell กลับมา · D6 teamLab รอบแรก+แปะก๊วยเย็น
+// · D7 Ueno+ฟรีไทม์ · สองจุดใหม่จากฉบับนี้: D2 เย็นขึ้น Skytree รอบ sunset (แทน Shibuya SKY)
+// · D7 ฟรีไทม์รวมตัวเลือก Shibuya SKY (จอง 20 พ.ย. 23:00 ไทย ถ้าจะไปศุกร์)
+const V13_DAYS=(function(){
+  const days=JSON.parse(JSON.stringify(V5_DAYS));
+  // ---- D2: เย็น Skytree แทน Shibuya SKY ----
+  const d2=days[1];
+  d2.title="อาซากุสะ แต่งกิโมโน + Skytree ยามเย็น";
+  d2.sub="Sensō-ji ชุดกิโมโน + Hanayashiki — เย็นขึ้น Skytree รอบ sunset (~16:45)";
+  d2.zone="อาซากุสะ (เช้า) → Skytree (เย็น)";
+  d2.extras=["Nakamise ขนมถนน (ningyo-yaki)","Solamachi เดินเบาหลังลงจากหอ"];
+  const v2=d2.variants[0];
+  const cut=v2.rows.findIndex(r=>r.act.includes('ไป Shibuya'));
+  v2.rows=v2.rows.slice(0,cut);
+  v2.rows.push(
+    R("15:55–16:30","ไป Skytree","Tokyo Sta. → Oshiage","Marunouchi → Hanzomon","~35 นาที",280,0,"logistic","",955,35),
+    R("16:30–17:45","ขึ้น Tokyo Skytree 🗼 รอบพระอาทิตย์ตก","Skytree Tembo Deck","","1 ชม. 15 นาที",0,3800,"attraction","sunset ~16:45 แล้ววิวกลางคืนต่อ · ≤5 ขวบฟรี · ซื้อตั๋วชั้นเดียวพอ",990,75),
+    R("17:45–18:45","มื้อเย็น Solamachi (ฟู้ดคอร์ต)","Solamachi (Skytree)","","1 ชม.",0,1800,"food","ใต้ตึก Skytree — เลือกง่าย รถเข็นได้",1065,60),
+    R("19:00–19:35","กลับโรงแรม","Oshiage → Tokyo Sta.","Hanzomon → Marunouchi","~35 นาที",280,0,"logistic","",1140,35)
+  );
+  // ---- D7: ฟรีไทม์รวมตัวเลือก Shibuya SKY ----
+  const d7=days[6];
+  d7.sub="แพนด้าตอนเปิด → งีบ → บ่ายเลือกเอง (Shibuya SKY sunset / Anpanman / Ginza / พัก)";
+  const f=d7.variants[0].rows.find(r=>r.act.includes('ฟรีไทม์'));
+  if(f){
+    f.act="⏳ ฟรีไทม์เลือกเอง: Shibuya SKY รอบ sunset 🌆 / Anpanman โยโกฮามะ / Ginza / พักโรงแรม";
+    f.note="Shibuya SKY ต้องจองล่วงหน้า (เปิดจอง 20 พ.ย. 23:00 ไทย หมดใน ~3 นาที) — sunset ~16:45 · Anpanman จองออนไลน์เท่านั้น · เลือกตามแรง Hooga วันนั้น";
+  }
+  // ---- D9: แก้ชื่อเส้นทางเดิมที่ค้างว่า Ueno ----
+  const r9=days[8].variants[0].rows.find(r=>r.act.includes('ไปสนามบิน'));
+  if(r9 && String(r9.ft).includes('Ueno')) r9.ft='Tokyo Sta. → Haneda';
+  return days;
+})();
+const V13_CHECKS=[
+  ["จอง Shibuya SKY — ถ้าไปศุกร์ 4 ธ.ค. (รอบ sunset)","เปิดจอง 20 พ.ย. 23:00 (ไทย) หมดใน ~3 นาที · สำรอง: จองรอบก่อนหน้าแล้วรอ sunset บนหอ","20 พ.ย. 23:00","w-now","รอตัดสินใจ"],
+  ["จองตั๋ว Disneyland (อังคาร 1 ธ.ค.)","ซื้อล่วงหน้าระบุวัน · Hooga <4 ขวบเข้าฟรี","~2 เดือนก่อน","w-pre","ยังไม่ได้ทำ"],
+  ["จองร้านกิโมโน Asakusa (อาทิตย์ 29 พ.ย.)","เลือกร้านที่มีชุดเด็ก 1–2 ขวบ + จองช่วง 09:30","~1 เดือนก่อน","w-pre","ยังไม่ได้ทำ"],
+  ["ซื้อบัตร teamLab Borderless (รอบแรก 09:30 พฤหัส 3 ธ.ค.)","เว็บทางการ — รอบแรกคนน้อยสุด · ≤3 ขวบฟรี","~1 เดือนก่อน","w-pre","ยังไม่ได้ทำ"],
+  ["ซื้อบัตร Maxell Aqua Park (พุธ 2 ธ.ค. บ่าย)","ออนไลน์ลดเล็กน้อย · เช็กตารางโชว์โลมาก่อนเข้า","~2 สัปดาห์","w-pre","ยังไม่ได้ทำ"],
+  ["(Optional) บัตร Anpanman Museum","จองออนลั่นเท่านั้น — เผื่อเลือกไปศุกร์แรงเหลือ","ถ้าจะไป","w-pre","รอตัดสินใจ"],
+  ["จองโรงแรม Sardonyx Tokyo (Yaesu) 8 คืน","free cancellation + แจ้งยืมเปลเด็ก","~2 เดือนก่อน","w-pre","ยังไม่ได้ทำ"],
+  ["เตรียม Suica + eSIM/pocket wifi + ประกันเดินทาง","ตั้ง Suica ในมือถือก่อนบิน","ก่อนบิน","w-pre","ยังไม่ได้ทำ"],
+];
+const V13_ROUTES=JSON.parse(JSON.stringify(V5_ROUTES));
+const V13_GEO=(function(){ const g=JSON.parse(JSON.stringify(V6_GEO)); g["Tokyo Skytree"]=[35.7101,139.8107]; return g; })();
+V13_DAYS.forEach(d=>d.variants[0].rows.forEach(r=>{ for(const k in V13_GEO){ if(r.act.includes(k)){ r.geo=V13_GEO[k]; break; } } }));
+
 const SEED = {
-  meta: { filename: "Tokyo_Trip_Working_Plan_2026.xlsx", loadedAt: "2026-09-06T00:00:00Z", source: "seed", schema: 12 },
+  meta: { filename: "Tokyo_Trip_Working_Plan_2026.xlsx", loadedAt: "2026-09-06T00:00:00Z", source: "seed", schema: 13 },
   settings: {
     fx: 0.23, foodStyle: "กลาง", hotelTokyo: 13000, nightsTokyo: 8,
     hotelShizuoka: 12000, nightsShizuoka: 0, adults: 2, children: 1,
     base: JSON.parse(JSON.stringify(V6_BASE))
   },
-  days: JSON.parse(JSON.stringify(V6_DAYS)),
-  routes: JSON.parse(JSON.stringify(V6_ROUTES)),
-  checks: JSON.parse(JSON.stringify(V6_CHECKS))
+  days: JSON.parse(JSON.stringify(V13_DAYS)),
+  routes: JSON.parse(JSON.stringify(V13_ROUTES)),
+  checks: JSON.parse(JSON.stringify(V13_CHECKS))
 };
 
 // ================= TIME UTILS =================
@@ -879,6 +927,17 @@ const Trips = {
 function migrate(state){
   if(!state || !state.days) return state;
   state.meta=state.meta||{};
+  // ---- v12→v13: "สลับแผนตามนี้" — กลับโครง V5 + D2 Skytree sunset + D7 ฟรีไทม์รวม Shibuya SKY — guard: first date of THIS trip only ----
+  if((state.meta.schema||0)<13){
+    if(state.days && state.days[0] && state.days[0].date==='2026-11-28'){
+      state.days=JSON.parse(JSON.stringify(V13_DAYS));
+      state.checks=JSON.parse(JSON.stringify(V13_CHECKS));
+      state.routes=JSON.parse(JSON.stringify(V13_ROUTES));
+      state.settings.base=JSON.parse(JSON.stringify(V6_BASE));
+      state.__mig=state.__mig||'v13-swap';
+    }
+    state.meta.schema=13; return state;
+  }
   // ---- v11→v12: My Maps master sync ("Autumn Japan 2026 | Tokyo with HOOGA") — guard: first date of THIS trip only ----
   if((state.meta.schema||0)<12){
     if(state.days && state.days[0] && state.days[0].date==='2026-11-28'){

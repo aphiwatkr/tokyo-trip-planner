@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Mitr:wght@300;400;500;600&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
-<script src="data.js?v=15"></script>
+<script src="data.js?v=16"></script>
 <script src="data-trips.js?v=2"></script>
 <script src="app.js?v=15"></script>
 <style>
@@ -408,9 +408,11 @@ function rebuildAll(){
   if(typeof renderIdeasPanel==='function') renderIdeasPanel();
 }
 function checkMigToast(){
-  if(S.__mig){ APP.toast(S.__mig==='v12-mymaps'
+  if(S.__mig){ APP.toast(S.__mig==='v13-swap'
+    ?'🔄 สลับแผนตามฉบับใหม่แล้ว (v13) — อ่านแผนใหม่ด้านบน / แก้ได้ที่หน้า Sheet'
+    :(S.__mig==='v12-mymaps'
     ?'🗺️ ปรับแผนตาม My Maps แล้ว (v12) — อ่านแผนใหม่ด้านบน / แก้ได้ที่หน้า Sheet'
-    :(S.__mig==='dec-revise'?'ปรับแผนตามที่เลือก: ตัด WB+Odaiba · เพิ่ม Anpanman (D6) + Maxell (D5) + ไฟ Marunouchi (D7)':'ปรับแผนแล้ว: ค้างโตเกียวทุกคืน — ไม่มี Shizuoka'), 6500); delete S.__mig; tpSave(S); }
+    :(S.__mig==='dec-revise'?'ปรับแผนตามที่เลือก: ตัด WB+Odaiba · เพิ่ม Anpanman (D6) + Maxell (D5) + ไฟ Marunouchi (D7)':'ปรับแผนแล้ว: ค้างโตเกียวทุกคืน — ไม่มี Shizuoka')), 7000); delete S.__mig; tpSave(S); }
 }
 function refreshTrips(){
   const sel=document.getElementById('trip-sel');

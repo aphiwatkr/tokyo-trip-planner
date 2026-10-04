@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Mitr:wght@300;400;500;600&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
-<script src="data.js?v=15"></script>
+<script src="data.js?v=16"></script>
 <script src="data-trips.js?v=2"></script>
 <script src="app.js?v=15"></script>
 <style>
@@ -1117,9 +1117,11 @@ refreshTrips();
 updateSyncInfo();
 wireFiles();
 renderIdeasPanel();
-if(S.__mig){ APP.toast(S.__mig==='v12-mymaps'
+if(S.__mig){ APP.toast(S.__mig==='v13-swap'
+    ?'🔄 สลับแผนตามฉบับใหม่แล้ว (v13): D1 วันเบา · D2 เย็น Skytree sunset · Maxell→D5 · teamLab+แปะก๊วย→D6 · D7 Ueno+ฟรีไทม์ (Shibuya SKY ถ้าไป — จอง 20 พ.ย.)'
+    :(S.__mig==='v12-mymaps'
     ?'🗺️ ปรับแผนตาม My Maps แล้ว (v12): D1 Maxell+Anpanman · Shibuya SKY→3 ธ.ค. · ช้อป 4–5 ธ.ค. · พิกัด 53 จุด + คลังไอเดียร้านอาหาร'
-    :(S.__mig==='dec-revise'?'ปรับแผนตามที่เลือก: ตัด WB+Odaiba · เพิ่ม Anpanman (D6) + Maxell (D5) + ไฟ Marunouchi (D7)':'ปรับแผนแล้ว: ค้างโตเกียวทุกคืน — ไม่มี Shizuoka'), 6500); delete S.__mig; tpSave(S); }
+    :(S.__mig==='dec-revise'?'ปรับแผนตามที่เลือก: ตัด WB+Odaiba · เพิ่ม Anpanman (D6) + Maxell (D5) + ไฟ Marunouchi (D7)':'ปรับแผนแล้ว: ค้างโตเกียวทุกคืน — ไม่มี Shizuoka')), 7000); delete S.__mig; tpSave(S); }
 </script>
 </body>
 </html>
