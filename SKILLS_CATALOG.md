@@ -151,3 +151,48 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 - `VoltAgent/awesome-agent-skills` (37k★) · `ComposioHQ/awesome-claude-skills` (79k★): curated indexes
 - `anthropics/claude-plugins-official` (47k★): official plugin directory
 - `K-Dense-AI/scientific-agent-skills`: 177 science skills (bio, chem, astro…)
+
+---
+
+# Round 2: Diagram & design skills (searched 2026-11-10)
+
+## J. Diagrams
+| # | Pick | Skill (repo, ★) | What it does |
+|---|---|---|---|
+| 101 | [ ] | archify ⭐ (tt-a1i/archify, 95k) | Turn an idea, plan or codebase into an interactive diagram |
+| 102 | [ ] | visual-explainer ⭐ (nicobailon/visual-explainer, 11k) | HTML pages or slides for diagrams, plan audits, data tables |
+| 103 | [ ] | drawio-skill (Agents365-ai/drawio-skill, 10.7k) | Editable draw.io diagrams from text, code, SQL, OpenAPI, Terraform |
+| 104 | [ ] | architecture-diagram-generator (Cocoon-AI, 7.6k) | Dark-theme system architecture diagrams as HTML/SVG |
+| 105 | [ ] | answer-me-with-html (QingYunA, 6.2k) | Answers hard questions as a readable one-page HTML |
+| 106 | [ ] | excalidraw-diagram-skill (coleam00, 5.2k) | Hand-drawn style Excalidraw diagrams |
+| 107 | [ ] | effective-html ⭐ (plannotator/effective-html, 4.1k) | HTML wireframes, prototypes, plans and diagrams |
+| 108 | [ ] | axton-obsidian-visual-skills ⭐ (axtonliu, 3.7k) | Obsidian Canvas, Excalidraw and Mermaid from text (pairs with your Obsidian skills) |
+| 109 | [ ] | markdown-viewer skills (markdown-viewer/skills, 3.4k) | Diagrams and visualizations right inside Markdown |
+| 110 | [ ] | mcp_excalidraw (yctimlin, 2.6k) | MCP server + skill to create, edit and export Excalidraw |
+| 111 | [ ] | stack-diagram (caru-ini, 2.2k) | One-sentence stack → architecture diagram with official logos |
+| 112 | [ ] | Pretty-mermaid-skills (imxv, 1.6k) | Mermaid rendered to SVG or ASCII, 15 themes |
+| 113 | [ ] | svg-diagram (bybit-exchange, 665) | Hand-placed SVG flowcharts, sequence and data-flow diagrams |
+| 114 | [ ] | visualise (bentossell, 486) | Inline interactive SVG diagrams, widgets and charts |
+
+## K. Design (UI, visual, slides, motion)
+| # | Pick | Skill (repo, ★) | What it does |
+|---|---|---|---|
+| 115 | [ ] | ui-ux-pro-max ⭐ (nextlevelbuilder, 148k) | Styles, palettes, font pairings, UX rules |
+| 116 | [ ] | taste-skill ⭐ (Leonxlnx, 113k) | Art direction and reference-driven "taste" |
+| 117 | [ ] | hallmark ⭐ (Nutlope, 52k) | Anti-AI-slop design rules |
+| 118 | [ ] | huashu-design ⭐ (alchaincyf, 29k) | Web/app prototypes, editable PPTX, infographics; 84 styles (docs mostly Chinese) |
+| 119 | [ ] | garden-skills (ConardLi, 15k) | Web design, image generation and more |
+| 120 | [ ] | unslop ⭐ (heydamir, 13k) | Turns AI-looking UI into a designed interface |
+| 121 | [ ] | ui-skills (ibelick, 11k) | Skills for design engineers |
+| 122 | [ ] | stitch-skills (google-labs-code, 8.7k) | Google Stitch UI design (needs the Stitch MCP) |
+| 123 | [ ] | logo-design-skill (kaankiziltug, 6.5k) | Logo principles, process and SVG output |
+| 124 | [ ] | baoyu-design (JimLiu, 6.3k) | Claude-Design-style UI mockups, locally |
+| 125 | [ ] | transitions.dev ⭐ (Jakubantalik, 6.2k) | 43+ polished UI transitions |
+| 126 | [ ] | designer-skills (Owl-Listener, 3.3k) | Research → systems → UI design workflow pack |
+| 127 | [ ] | ux-ui-agent-skills (plugin87, 3.2k) | Design tokens, 52 components, WCAG 2.2 |
+| 128 | [ ] | oil-ui (oil-oil, 3.1k) | Explore distinct UI directions side by side |
+| 129 | [ ] | apple-design-skill (dickwu, 3.1k) | UI review against Apple HIG |
+| 130 | [ ] | motion-design-skill (LottieFiles, 2.9k) | Timing, easing, choreography principles |
+| 131 | [ ] | nothing-design-skill (dominikmartn, 2.9k) | Monochrome "Nothing"-style UI |
+| 132 | [ ] | power-design ⭐ (ItsssssJack, 769) | Slides that don't look AI-made (for the Tokyo deck) |
+| 133 | [ ] | awesome-design-skills (bergside, 3.6k) | Index of 67 DESIGN.md / design skill files (browse only) |
