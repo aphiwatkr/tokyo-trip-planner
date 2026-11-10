@@ -10,8 +10,8 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 ## A. anthropics/skills (191k★): official Anthropic
 | # | Pick | Skill | What it does |
 |---|---|---|---|
-| 1 | [ ] | `frontend-design` ⭐ | Distinctive, intentional visual design for new or reshaped UI |
-| 2 | [ ] | `webapp-testing` ⭐ | Test local web apps with Playwright (screenshots, logs, UI checks) |
+| 1 | [x] | `frontend-design` ⭐ | Distinctive, intentional visual design for new or reshaped UI |
+| 2 | [x] | `webapp-testing` ⭐ | Test local web apps with Playwright (screenshots, logs, UI checks) |
 | 3 | [ ] | `web-artifacts-builder` | Multi-component HTML artifacts (React, Tailwind, shadcn) |
 | 4 | [ ] | `theme-factory` ⭐ | Apply ready-made themes to slides, docs and HTML pages |
 | 5 | [ ] | `canvas-design` | Visual art/posters as PNG/PDF from a design philosophy |
@@ -31,7 +31,7 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 ## B. obra/superpowers (315k★): dev methodology
 | # | Pick | Skill | What it does |
 |---|---|---|---|
-| 18 | [ ] | `brainstorming` ⭐ | Shape a design with you before any creative or coding work |
+| 18 | [x] | `brainstorming` ⭐ | Shape a design with you before any creative or coding work |
 | 19 | [ ] | `writing-plans` | Turn a spec into a step-by-step implementation plan |
 | 20 | [ ] | `executing-plans` | Execute a written plan with checkpoints |
 | 21 | [ ] | `subagent-driven-development` | Run plan tasks through fresh subagents, with review between tasks |
@@ -44,21 +44,21 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 | 28 | [ ] | `using-git-worktrees` | Isolate feature work in worktrees |
 | 29 | [ ] | `finishing-a-development-branch` | Decide merge, PR or cleanup when work is done |
 | 30 | [ ] | `writing-skills` | Author and test your own skills |
-| 31 | [ ] | `using-superpowers` | Bootstrap: always look for a matching skill first |
+| 31 | [x] | `using-superpowers` | Bootstrap: always look for a matching skill first |
 
 ## C. mattpocock/skills (320k★): "skills for real engineers"
 | # | Pick | Skill | What it does |
 |---|---|---|---|
-| 32 | [ ] | `grill-me` ⭐ | Relentless interview to stress-test a plan |
+| 32 | [x] | `grill-me` ⭐ | Relentless interview to stress-test a plan |
 | 33 | [ ] | `tdd` | Test-first development loop |
 | 34 | [ ] | `diagnosing-bugs` | Diagnosis loop for hard bugs and performance regressions |
 | 35 | [ ] | `code-review` | Review since a commit along Standards and Spec axes |
 | 36 | [ ] | `to-spec` | Turn the conversation into a spec in the issue tracker |
 | 37 | [ ] | `to-tickets` | Break a spec into tracer-bullet tickets |
-| 38 | [ ] | `improve-codebase-architecture` ⭐ | Find refactoring opportunities, report them as visual HTML |
+| 38 | [x] | `improve-codebase-architecture` ⭐ | Find refactoring opportunities, report them as visual HTML |
 | 39 | [ ] | `domain-modeling` | Build a GLOSSARY / domain model |
 | 40 | [ ] | `prototype` | Throwaway prototype to answer a design question |
-| 41 | [ ] | `research` | Research primary sources and save findings as markdown |
+| 41 | [x] | `research` | Research primary sources and save findings as markdown |
 | 42 | [ ] | `handoff` | Compact the session into a handoff doc |
 | 43 | [ ] | `git-guardrails-claude-code` | Hooks that block dangerous git commands |
 | 44 | [ ] | `setup-pre-commit` | Husky + lint-staged + typecheck + tests |
@@ -74,9 +74,9 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 | 50 | [ ] | `context-engineering` | Tune agent context and CLAUDE.md |
 | 51 | [ ] | `code-simplification` ⭐ | Refactor for clarity without changing behavior |
 | 52 | [ ] | `api-and-interface-design` | Stable APIs and module boundaries |
-| 53 | [ ] | `frontend-ui-engineering` ⭐ | Accessible, responsive production UI |
+| 53 | [x] | `frontend-ui-engineering` ⭐ | Accessible, responsive production UI |
 | 54 | [ ] | `security-and-hardening` | Input handling, auth, vulnerability audit |
-| 55 | [ ] | `performance-optimization` ⭐ | Frontend, backend and query performance |
+| 55 | [x] | `performance-optimization` ⭐ | Frontend, backend and query performance |
 | 56 | [ ] | `ci-cd-and-automation` | Build and deploy pipelines |
 | 57 | [ ] | `shipping-and-launch` | Pre-launch checklist |
 | 58 | [ ] | `observability-and-instrumentation` | Logs, metrics, tracing |
@@ -91,7 +91,7 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 | 63 | [ ] | `taste-skill` ⭐ (Leonxlnx, 113k) | Art direction and visual "taste" for coding agents |
 | 64 | [ ] | `caveman` (JuliusBrussee, 119k) | Ultra-terse output to save tokens |
 | 65 | [ ] | `humanizer` (blader, 67k) | Strip AI-writing tells from text |
-| 66 | [ ] | `last30days` ⭐ (mvanhorn, 67k) | Research a topic across Reddit, X, YouTube and HN for the last 30 days (fresh Tokyo tips) |
+| 66 | [x] | `last30days` ⭐ (mvanhorn, 67k) | Research a topic across Reddit, X, YouTube and HN for the last 30 days (fresh Tokyo tips) |
 | 67 | [ ] | `security-audit` (cloudflare, 69k) | Multi-phase, verified security audit |
 | 68 | [ ] | `archify` (tt-a1i, 95k) | Turn an idea or codebase into an interactive diagram |
 | 69 | [ ] | `hallmark` ⭐ (Nutlope, 52k) | Anti-"AI slop" design rules |
@@ -117,11 +117,11 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 ## G. kepano/obsidian-skills (51k★): Obsidian creator
 | # | Pick | Skill | What it does |
 |---|---|---|---|
-| 84 | [ ] | `obsidian-markdown` | Wikilinks, callouts, embeds, properties |
-| 85 | [ ] | `obsidian-cli` | Read and manage a vault from the CLI |
-| 86 | [ ] | `obsidian-bases` | `.base` database views |
-| 87 | [ ] | `json-canvas` | `.canvas` mind maps / boards |
-| 88 | [ ] | `defuddle` ⭐ | Clean Markdown from web pages (scrape place info) |
+| 84 | [x] | `obsidian-markdown` | Wikilinks, callouts, embeds, properties |
+| 85 | [x] | `obsidian-cli` | Read and manage a vault from the CLI |
+| 86 | [x] | `obsidian-bases` | `.base` database views |
+| 87 | [x] | `json-canvas` | `.canvas` mind maps / boards |
+| 88 | [x] | `defuddle` ⭐ | Clean Markdown from web pages (scrape place info) |
 
 ## H. wshobson/agents (42k★): 185 skills, picked highlights
 | # | Pick | Skill | What it does |
@@ -131,7 +131,7 @@ Legend: ⭐ = fits this project well (static HTML/JS trip planner + PPTX/JSON da
 | 91 | [ ] | `llm-evaluation` | Eval harnesses for LLM apps |
 | 92 | [ ] | `modern-javascript-patterns` ⭐ | ES202x idioms for vanilla JS |
 | 93 | [ ] | `tailwind-design-system` | Tailwind tokens and components |
-| 94 | [ ] | `responsive-design` ⭐ | Mobile-first layouts |
+| 94 | [x] | `responsive-design` ⭐ | Mobile-first layouts |
 | 95 | [ ] | `github-actions-templates` ⭐ | CI workflows (e.g. deploy to GitHub Pages) |
 | 96 | [ ] | `postmortem-writing` | Blameless postmortems |
 | 97 | [ ] | `accessibility-compliance` | WCAG compliance |
