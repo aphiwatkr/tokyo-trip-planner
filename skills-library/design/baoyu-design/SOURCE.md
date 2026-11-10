@@ -1,0 +1,108 @@
+# Source
+
+- Repo: https://github.com/JimLiu/baoyu-design
+- Path: `archive/baoyu-design`
+- Commit: `9486bb1568efd563dd5d41636bb0da575a4801d1`
+- License: see LICENSE (from `LICENSE`)
+
+1 asset/example files (icons, images, galleries) were not copied; get them from the repo if needed.
+
+## Code files NOT copied (review before importing)
+
+- `agents/build-preview.mjs`
+- `agents/check-design-system.mjs`
+- `agents/compile-design-system.mjs`
+- `agents/gen-pptx/src/browser/capture-editable.ts`
+- `agents/gen-pptx/src/browser/capture-screenshot.ts`
+- `agents/gen-pptx/src/browser/dom-style.ts`
+- `agents/gen-pptx/src/browser/entry.ts`
+- `agents/gen-pptx/src/browser/gradient.ts`
+- `agents/gen-pptx/src/browser/media-browser.ts`
+- `agents/gen-pptx/src/browser/setup.ts`
+- `agents/gen-pptx/src/cli.ts`
+- `agents/gen-pptx/src/core/anim.ts`
+- `agents/gen-pptx/src/core/color.ts`
+- `agents/gen-pptx/src/core/css.ts`
+- `agents/gen-pptx/src/core/filename.ts`
+- `agents/gen-pptx/src/core/fonts.ts`
+- `agents/gen-pptx/src/core/sanitize.ts`
+- `agents/gen-pptx/src/core/units.ts`
+- `agents/gen-pptx/src/index.ts`
+- `agents/gen-pptx/src/orchestrator/driver.ts`
+- `agents/gen-pptx/src/orchestrator/errors.ts`
+- `agents/gen-pptx/src/orchestrator/inject.ts`
+- `agents/gen-pptx/src/orchestrator/output.ts`
+- `agents/gen-pptx/src/orchestrator/run.ts`
+- `agents/gen-pptx/src/render/build-editable.ts`
+- `agents/gen-pptx/src/render/build-screenshot.ts`
+- `agents/gen-pptx/src/render/context.ts`
+- `agents/gen-pptx/src/render/list.ts`
+- `agents/gen-pptx/src/render/media-cache.ts`
+- `agents/gen-pptx/src/render/render-node.ts`
+- `agents/gen-pptx/src/render/text-runs.ts`
+- `agents/gen-pptx/src/render/timing.ts`
+- `agents/gen-pptx/src/types.ts`
+- `agents/gen-pptx/src/validate/validate.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/libs/jszip.min.js`
+- `agents/gen-pptx/vendor/pptxgenjs/libs/polyfill.min.js`
+- `agents/gen-pptx/vendor/pptxgenjs/src/core-enums.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/core-interfaces.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/gen-charts.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/gen-media.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/gen-objects.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/gen-tables.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/gen-utils.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/gen-xml.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/pptxgen.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/src/slide.ts`
+- `agents/gen-pptx/vendor/pptxgenjs/types/index.d.ts`
+- `agents/gen-video/src/cli.ts`
+- `agents/gen-video/src/orchestrator/driver.ts`
+- `agents/gen-video/src/orchestrator/encode.ts`
+- `agents/gen-video/src/orchestrator/errors.ts`
+- `agents/gen-video/src/orchestrator/filename.ts`
+- `agents/gen-video/src/orchestrator/output.ts`
+- `agents/gen-video/src/orchestrator/run.ts`
+- `agents/gen-video/src/types.ts`
+- `agents/gen-video/src/validate/validate.ts`
+- `agents/import-design-system.mjs`
+- `agents/import-figma.mjs`
+- `agents/lib/asset-store.mjs`
+- `agents/lib/ds-core.mjs`
+- `agents/lib/ds-prompt.mjs`
+- `agents/record-asset.mjs`
+- `agents/vendor/babel.min.js`
+- `agents/vendor/fflate.mjs`
+- `agents/vendor/fig-materialize.mjs`
+- `agents/vendor/react-18.3.1.production.min.js`
+- `agents/vendor/react-dom-18.3.1.production.min.js`
+- `starter-components/android-frame.jsx`
+- `starter-components/animations-v2.jsx`
+- `starter-components/animations-v3.jsx`
+- `starter-components/animations.jsx`
+- `starter-components/browser-window.jsx`
+- `starter-components/chart-stage.js`
+- `starter-components/chrome-shell.js`
+- `starter-components/data-overlay.js`
+- `starter-components/deck-stage.js`
+- `starter-components/design-canvas.jsx`
+- `starter-components/doc-page.js`
+- `starter-components/facebook-shell.js`
+- `starter-components/file-window.js`
+- `starter-components/image-slot.js`
+- `starter-components/instagram-shell.js`
+- `starter-components/instagram-story.js`
+- `starter-components/ios-frame.jsx`
+- `starter-components/ios-shell.js`
+- `starter-components/linkedin-shell.js`
+- `starter-components/macos-window.jsx`
+- `starter-components/pinterest-shell.js`
+- `starter-components/post-card.js`
+- `starter-components/reddit-shell.js`
+- `starter-components/social-frames.js`
+- `starter-components/three-d-stage.js`
+- `starter-components/tiktok-shell.js`
+- `starter-components/tweaks-panel.jsx`
+- `starter-components/watercolor-kit.js`
+- `starter-components/x-shell.js`
+- `starter-components/youtube-shell.js`

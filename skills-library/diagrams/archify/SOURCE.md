@@ -1,0 +1,115 @@
+# Source
+
+- Repo: https://github.com/tt-a1i/archify
+- Path: `archify`
+- Commit: `7e45f36c66de1254d5ad6ba1d878f6499ea269fd`
+- License: see LICENSE (from `LICENSE`)
+
+50 asset/example files (icons, images, galleries) were not copied; get them from the repo if needed.
+
+## Code files NOT copied (review before importing)
+
+- `bin/archify.mjs`
+- `bin/delivery-update.mjs`
+- `bin/finalize.mjs`
+- `bin/open-artifact.mjs`
+- `bin/preview.mjs`
+- `bin/recover-output.mjs`
+- `bin/visual-check.mjs`
+- `delta/architecture-delta.mjs`
+- `explainer/browser-check.mjs`
+- `explainer/charts.mjs`
+- `explainer/check.mjs`
+- `explainer/diagrams.mjs`
+- `explainer/diff.mjs`
+- `explainer/inline.mjs`
+- `explainer/layout.mjs`
+- `explainer/page-bundle.mjs`
+- `explainer/parse.mjs`
+- `explainer/patch.mjs`
+- `explainer/prepare.mjs`
+- `explainer/reader.js`
+- `explainer/render.mjs`
+- `explainer/revision.mjs`
+- `explainer/sources.mjs`
+- `explainer/validate.mjs`
+- `explainer/vendor/pele/chunks/3DKXF73K.js`
+- `explainer/vendor/pele/chunks/42UTT654.js`
+- `explainer/vendor/pele/chunks/DKTLEL5E.js`
+- `explainer/vendor/pele/chunks/EEIX5ZYH.js`
+- `explainer/vendor/pele/chunks/EJ5KOXYD.js`
+- `explainer/vendor/pele/chunks/GUJTEFZK.js`
+- `explainer/vendor/pele/chunks/IZOKQ2GT.js`
+- `explainer/vendor/pele/chunks/L4LY553T.js`
+- `explainer/vendor/pele/chunks/MSKIJHB2.js`
+- `explainer/vendor/pele/chunks/RVARI57O.js`
+- `explainer/vendor/pele/chunks/UKSIWDDN.js`
+- `explainer/vendor/pele/chunks/UPTXNAXN.js`
+- `explainer/vendor/pele/chunks/XTDUIGUI.js`
+- `explainer/vendor/pele/chunks/YAYTP6L5.js`
+- `explainer/vendor/pele/core.js`
+- `explainer/vendor/pele/diagrams/pie.js`
+- `explainer/vendor/pele/diagrams/quadrantChart.js`
+- `explainer/vendor/pele/diagrams/radar.js`
+- `explainer/vendor/pele/diagrams/sankey.js`
+- `explainer/vendor/pele/diagrams/venn.js`
+- `explainer/vendor/pele/diagrams/xychart.js`
+- `explainer/writing.mjs`
+- `migrations/workflow-v2.mjs`
+- `recipes/scenarios.mjs`
+- `renderers/architecture/grid.mjs`
+- `renderers/architecture/labels.mjs`
+- `renderers/architecture/render-architecture.mjs`
+- `renderers/architecture/routing.mjs`
+- `renderers/class/render-class.mjs`
+- `renderers/dataflow/dataflow-compiler.mjs`
+- `renderers/dataflow/joint-label-routing.mjs`
+- `renderers/dataflow/label-capacity.mjs`
+- `renderers/dataflow/render-dataflow.mjs`
+- `renderers/erd/grid.mjs`
+- `renderers/erd/render-erd.mjs`
+- `renderers/explainer/render-explainer.mjs`
+- `renderers/lifecycle/render-lifecycle.mjs`
+- `renderers/sequence/render-sequence.mjs`
+- `renderers/shared/atomic-output.mjs`
+- `renderers/shared/automatic-labels.mjs`
+- `renderers/shared/brand-marks.mjs`
+- `renderers/shared/cli.mjs`
+- `renderers/shared/desktop-readability.mjs`
+- `renderers/shared/diagnostics.mjs`
+- `renderers/shared/engineering-profiles.mjs`
+- `renderers/shared/generated-brand-marks.mjs`
+- `renderers/shared/generated-validators.mjs`
+- `renderers/shared/geometry.mjs`
+- `renderers/shared/i18n.mjs`
+- `renderers/shared/layout-report.mjs`
+- `renderers/shared/legend.mjs`
+- `renderers/shared/node-card-style.mjs`
+- `renderers/shared/output-path.mjs`
+- `renderers/shared/owned-temp-directory.mjs`
+- `renderers/shared/path-semantics.mjs`
+- `renderers/shared/portable-path.mjs`
+- `renderers/shared/repository-evidence.mjs`
+- `renderers/shared/repository-location.mjs`
+- `renderers/shared/route-quality.mjs`
+- `renderers/shared/sidecar-path.mjs`
+- `renderers/shared/software-notices.mjs`
+- `renderers/shared/spatial-grid.mjs`
+- `renderers/shared/svg-path-analysis.mjs`
+- `renderers/shared/text-fit.mjs`
+- `renderers/shared/utils.mjs`
+- `renderers/shared/validator.mjs`
+- `renderers/timeline/render-timeline.mjs`
+- `renderers/tree/render-tree.mjs`
+- `renderers/waterfall/render-waterfall.mjs`
+- `renderers/workflow/render-workflow.mjs`
+- `renderers/workflow/workflow-compiler.mjs`
+- `renderers/workflow/workflow-migration-geometry.mjs`
+- `renderers/workflow/workflow-placement-repair.mjs`
+- `scripts/check-render-output.mjs`
+- `scripts/check-update.mjs`
+- `scripts/delivery-update-child.mjs`
+- `scripts/generate-brand-marks.mjs`
+- `scripts/generate-validators.mjs`
+- `scripts/render-examples.mjs`
+- `scripts/update-contract.mjs`

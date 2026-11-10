@@ -14,6 +14,7 @@ skill's SOURCE.md so someone can review and import them on purpose.
 """
 import os
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -26,6 +27,8 @@ CODE_EXT = {".py", ".js", ".cjs", ".mjs", ".ts", ".tsx", ".jsx", ".sh", ".bash",
             ".rb", ".go", ".rs", ".ps1", ".bat", ".php", ".lua"}
 MAX_FILE = 300 * 1024
 SKIP_DIRS = {"node_modules", "__pycache__", "tests", "test", "fixtures", "evals", ".git"}
+# Bulky asset packs and galleries: left out, counted in SOURCE.md.
+ASSET_DIRS = {"assets", "examples", "gallery", "samples", "showcase", "media", "images", "stencils", "plantuml-stencils"}
 # Paths that are duplicate copies of a skill packaged for another agent/CLI.
 DUP_PATH = re.compile(r"(^|/)(\.cursor|\.agents|\.codex|\.gemini|cli/assets|plugins/caveman|refine)/")
 
@@ -143,7 +146,8 @@ def build():
             sizes[path] = int(size) if size.isdigit() else 0
         sha = git(repo, "rev-parse", "HEAD").decode().strip()
         lic = license_file(repo)
-        owner_repo = rdir.replace("_", "/", 1)
+        url = git(repo, "remote", "get-url", "origin").decode().strip()
+        owner_repo = re.sub(r"^https://github\.com/|\.git$", "", url)
         skill_dirs = sorted(os.path.dirname(p) for p in sizes if p == "SKILL.md" or p.endswith("/SKILL.md"))
         seen = set()
         for sdir in skill_dirs:
@@ -158,15 +162,25 @@ def build():
             slug = name if name not in used else f"{name}--{rdir.split('_')[0]}"
             used.add(slug)
             dest = LIB / category / slug
+            if (dest / "REVIEWED").exists():
+                # Full copy (code included) that was reviewed by hand: never overwrite.
+                fm = parse_frontmatter((dest / "SKILL.md").read_text(errors="replace"))
+                desc = re.sub(r"\s+", " ", fm.get("description", "")).replace("|", "/")
+                index.append((category, slug, owner_repo, desc, "reviewed"))
+                continue
+            shutil.rmtree(dest, ignore_errors=True)
             dest.mkdir(parents=True, exist_ok=True)
             prefix = (sdir + "/") if sdir else ""
-            omitted = []
+            omitted, assets_skipped = [], 0
             for path, size in sizes.items():
                 if not path.startswith(prefix) or path.endswith("/"):
                     continue
                 rel = path[len(prefix):]
                 parts = rel.split("/")
                 if any(p in SKIP_DIRS for p in parts[:-1]):
+                    continue
+                if any(p in ASSET_DIRS for p in parts[:-1]):
+                    assets_skipped += 1
                     continue
                 if not sdir and len(parts) > 1 and not rel.startswith(("references/", "reference/", "docs/", "templates/", "examples/")):
                     continue  # repo-root skill: keep only its own docs, not the whole repo
@@ -185,27 +199,28 @@ def build():
             src = [f"# Source", "", f"- Repo: https://github.com/{owner_repo}",
                    f"- Path: `{sdir or '.'}`", f"- Commit: `{sha}`",
                    f"- License: see LICENSE (from `{lic}`)" if lic else "- License: none found"]
+            if assets_skipped:
+                src += ["", f"{assets_skipped} asset/example files (icons, images, galleries) were not copied; get them from the repo if needed."]
             if omitted:
                 src += ["", "## Code files NOT copied (review before importing)", ""]
                 src += [f"- `{o}`" for o in sorted(omitted)]
             (dest / "SOURCE.md").write_text("\n".join(src) + "\n")
             desc = re.sub(r"\s+", " ", fm.get("description", "")).replace("|", "/")
-            index.append((category, slug, owner_repo, desc, bool(omitted)))
+            index.append((category, slug, owner_repo, desc, "scripts-omitted" if omitted else ""))
 
     lines = ["# Skills library index", "",
              "Not auto-loaded. The `skill-router` skill searches this file and reads the chosen",
              "skill's SKILL.md on demand. Regenerate with `scripts/build-skills-library.py`.", "",
              "Flags: `scripts-omitted` = the upstream skill ships code that was NOT copied; its",
-             "instructions may reference missing files. `reviewed` = full copy, code reviewed.", "",
+             "instructions may reference missing files. `reviewed` = full copy, code reviewed by hand\n(marked by a REVIEWED file; the build never overwrites it).", "",
              "| Skill | Category | Source | Flags | Description |", "|---|---|---|---|---|"]
-    for cat, slug, src, desc, has_code in sorted(index):
-        flag = "scripts-omitted" if has_code else ""
+    for cat, slug, src, desc, flag in sorted(index):
         lines.append(f"| [{slug}]({cat}/{slug}/SKILL.md) | {cat} | {src} | {flag} | {desc[:220]} |")
     lines += ["", "## Link only (not copied)", "", "| Name | Category | Repo | Why |", "|---|---|---|---|"]
     for cat, repo, name, why in LINK_ONLY:
         lines.append(f"| {name} | {cat} | https://github.com/{repo} | {why} |")
     (LIB / "INDEX.md").write_text("\n".join(lines) + "\n")
-    print(f"{len(index)} skills written, {sum(i[4] for i in index)} with scripts omitted")
+    print(f"{len(index)} skills indexed: {sum(i[4] == 'scripts-omitted' for i in index)} with scripts omitted, {sum(i[4] == 'reviewed' for i in index)} reviewed")
 
 
 if __name__ == "__main__":

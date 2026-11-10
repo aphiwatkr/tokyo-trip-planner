@@ -1,0 +1,55 @@
+# Source
+
+- Repo: https://github.com/Agents365-ai/drawio-skill
+- Path: `skills/drawio-skill`
+- Commit: `6550495129d9a42eff7e71434d15bfc9846b6202`
+- License: see LICENSE (from `LICENSE`)
+
+## Code files NOT copied (review before importing)
+
+- `scripts/aiicons.py`
+- `scripts/asyncapiimports.py`
+- `scripts/autolayout.py`
+- `scripts/buildup.py`
+- `scripts/c4.py`
+- `scripts/ciimports.py`
+- `scripts/composeimports.py`
+- `scripts/compress.py`
+- `scripts/dbxicons.py`
+- `scripts/diagram_ir.py`
+- `scripts/diagramctl.py`
+- `scripts/diagramctl_mcp.py`
+- `scripts/dockerimports.py`
+- `scripts/drawio2mermaid.py`
+- `scripts/drawio2pptx.py`
+- `scripts/drawio_cli.py`
+- `scripts/drawiodiff.py`
+- `scripts/drawiohtml.py`
+- `scripts/edgeports.py`
+- `scripts/encode_drawio_url.py`
+- `scripts/explain.py`
+- `scripts/goimports.py`
+- `scripts/graphqlerd.py`
+- `scripts/heatmap.py`
+- `scripts/jsimports.py`
+- `scripts/k8simports.py`
+- `scripts/openapiimports.py`
+- `scripts/prdiff.py`
+- `scripts/protoimports.py`
+- `scripts/pyclasses.py`
+- `scripts/pyimports.py`
+- `scripts/raster2drawio.py`
+- `scripts/relabel.py`
+- `scripts/repair_png.py`
+- `scripts/restyle.py`
+- `scripts/runbook.py`
+- `scripts/rustimports.py`
+- `scripts/seqlayout.py`
+- `scripts/shapesearch.py`
+- `scripts/sqlerd.py`
+- `scripts/svgflow.py`
+- `scripts/tfimports.py`
+- `scripts/tfstate.py`
+- `scripts/timelapse.py`
+- `scripts/tubemap.py`
+- `scripts/validate.py`
